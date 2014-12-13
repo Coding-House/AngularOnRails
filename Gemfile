@@ -36,3 +36,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'gravatar-ultimate'
+gem 'rails_12factor'

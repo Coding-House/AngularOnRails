@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :answers
+
+  resources :questions
+
   get 'home/index'
 
   root 'home#index'

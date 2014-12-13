@@ -18,10 +18,8 @@ console.log("Works!");
 
 
 var AoRApp = angular.module('AoR', [])
- .controller('MainController',
+ .controller('MainController', ['$scope', '$http',
     function($scope, $http) {
-      $scope.var1 = 'CodingHouse';
-      // $scope.questions = fakeData;
       $http.get("/questions").then(function(response){
         $scope.questions = response.data;
       });
@@ -38,7 +36,7 @@ var AoRApp = angular.module('AoR', [])
           console.log(error);
         })
       }
-  });
+  }]);
 
 
 

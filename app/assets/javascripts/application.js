@@ -16,11 +16,6 @@
 
 console.log("Works!");
 
-var fakeData = [
-  { email: 'a@codinghouse', body: 'A question by A' },
-  { email: 'b@codinghouse', body: 'A question by B' },
-  { email: 'c@codinghouse', body: 'A question by C' }
-];
 
 var AoRApp = angular.module('AoR', [])
  .controller('MainController',
@@ -30,6 +25,10 @@ var AoRApp = angular.module('AoR', [])
       $http.get("/questions").then(function(response){
         $scope.questions = response.data;
       });
+
+      $scope.addQuestion = function() {
+        debugger;
+      }
   });
 
 

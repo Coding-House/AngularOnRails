@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    render json: Question.all.to_json(methods: [:gravatar_url])
+    render json: Question.all
   end
 
   def create

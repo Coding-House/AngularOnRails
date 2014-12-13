@@ -33,17 +33,19 @@
       <div class="col-md-12">
         <h2>Questions</h2>
         <div class="row replace-with-data">
-          <div class="col-md-6">
+
+          <div class="col-md-6" ng-repeat="question in questions">
             <div class="well">
               <div class="media">
                 <a class="pull-left" href="question-details.html?id=0">
-                  <img class="media-object img-circle" src="http://www.gravatar.com/avatar/118eafde997b09ac977f5ed25993ff5f?s=128 " alt="..."> </a> <div class="media-body"> <h4 class="media-heading">james1@manofstone.com asks</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae earum amet tenetur, perferendis voluptatibus eius pariatur corporis soluta, illum odio quis iure voluptas dolor ea, impedit! Fugiat quas in, perspiciatis.</p>
+                  <img class="media-object img-circle" src="http://www.gravatar.com/avatar/118eafde997b09ac977f5ed25993ff5f?s=128 " alt="..."> </a> <div class="media-body"> <h4 class="media-heading">{{question.email}} asks</h4>
+                  <p>{{question.body}}</p>
                   <a href="question-details.html" class="btn btn-info pull-right">View Answers »</a>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

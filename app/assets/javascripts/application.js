@@ -27,7 +27,16 @@ var AoRApp = angular.module('AoR', [])
       });
 
       $scope.addQuestion = function() {
-        debugger;
+        $http.post("/questions" , {
+          email: $scope.email,
+          body: $scope.body
+        }).success(function(data) {
+          console.log(data);
+          $("#askQuestionModal").hide();
+          $scope.questions.push(data);
+        }).error(function(error) {
+          console.log(error);
+        })
       }
   });
 

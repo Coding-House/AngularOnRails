@@ -38,7 +38,7 @@
             <div class="well">
               <div class="media">
                 <a class="pull-left" href="question-details.html?id=0">
-                  <img class="media-object img-circle" src="http://www.gravatar.com/avatar/118eafde997b09ac977f5ed25993ff5f?s=128 " alt="..."> </a> <div class="media-body"> <h4 class="media-heading">{{question.email}} asks</h4>
+                  <img class="media-object img-circle" ng-src="{{question.gravatar_url}}" alt="..."> </a> <div class="media-body"> <h4 class="media-heading">{{question.email}} asks</h4>
                   <p>{{question.body}}</p>
                   <a href="question-details.html" class="btn btn-info pull-right">View Answers »</a>
                 </div>
